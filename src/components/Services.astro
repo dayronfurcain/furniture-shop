@@ -1,0 +1,37 @@
+---
+import { Image } from '@astrojs/image/components';
+import { furnitureService } from '../assets';
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout>
+  <section
+    class="px-10 py-28 flex flex-col lg:flex-row items-center justify-between gap-y-8"
+  >
+    <Image
+      src={furnitureService}
+      alt="furniture-service"
+      width={undefined}
+      height={undefined}
+      class="w-[300px] aspect-video object-cover rounded-md"
+    />
+    <div
+      class="max-w-[500px] flex flex-col items-center lg:items-start gap-y-4"
+    >
+      <h2 class="text-3xl font-bold text-center">Our Servicies & Benefits</h2>
+      <p class="text-sm max-w-[360px] text-center lg:text-start">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
+        doloremque corrupti nesciunt earum veniam, reiciendis natus. Nesciunt
+        hic quasi voluptatum.
+      </p>
+      <ul class="text-sm grid grid-cols-2 lg:grid-cols-3 gap-4">
+        <li><p>Fast & Free delivery</p></li>
+        <li><p>21 Years Experience</p></li>
+        <li><p>Update Design</p></li>
+        <li><p>Interior Architerture</p></li>
+        <li><p>Event Decoration</p></li>
+        <li><p>Available Product</p></li>
+      </ul>
+    </div>
+  </section>
+</MainLayout>

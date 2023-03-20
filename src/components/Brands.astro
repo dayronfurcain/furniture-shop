@@ -1,0 +1,27 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { Image } from '@astrojs/image/components';
+import { brands } from '../constants';
+---
+
+<MainLayout>
+  <section class="px-10">
+    <ul
+      class="flex flex-wrap justify-center lg:justify-between items-center gap-8"
+    >
+      {
+        brands.map((brand) => (
+          <li>
+            <Image
+              height={30}
+              width={undefined}
+              src={brand.img}
+              alt={brand.description}
+              format="png"
+            />
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</MainLayout>

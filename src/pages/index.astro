@@ -1,0 +1,20 @@
+---
+import Brands from '../components/Brands.astro';
+import Features from '../components/Features/Features.astro';
+import Hero from '../components/Hero.astro';
+import Overview from '../components/Overview.astro';
+import Header from '../components/Header/Header.astro';
+import Services from '../components/Services.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Furniture Shop">
+  <main class="grid grid-cols-1">
+    <div class="bg-[#FFF3F3]"><Header /><Hero /></div>
+    <div class="py-28 flex flex-col items-center gap-20">
+      <Brands /><Overview />
+    </div>
+    <div class="bg-[#EEF1FB]"><Features /></div>
+    <div><Services /></div>
+  </main>
+</Layout>

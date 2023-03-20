@@ -1,0 +1,47 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { furniture1 } from '../assets';
+import { Image } from '@astrojs/image/components';
+---
+
+<MainLayout>
+  <section
+    class="px-10 py-8 flex flex-col lg:flex-row items-center lg:items-end justify-between gap-8"
+  >
+    <div
+      class="flex flex-col items-center lg:items-start gap-6 max-w-sm text-center lg:text-left"
+    >
+      <h1 class="font-bold text-4xl">Furniture that comforts the eyes</h1>
+      <p class="text-sm">
+        Choose from a wide range well-crafted premium quality wooden furniture
+        online.
+      </p>
+      <div class="flex items-center gap-6 lg:justify-start lg:gap-4 text-base">
+        <button
+          class="bg-[#F16240] py-2 px-4 rounded-md uppercase text-white lg:text-lg"
+          >Show now</button
+        >
+        <div class="flex items-center gap-2 cursor-pointer">
+          <button
+            class="text-[#F16240] ring-2 ring-[#F16240] w-9 aspect-square rounded-[50%]"
+          >
+            <i
+              class="bx bx-play bx-sm text-center align-middle translate-x-[1px]"
+            ></i>
+          </button>
+          <span class="text-left lg:text-lg">Watch Video</span>
+        </div>
+      </div>
+    </div>
+    <div class="">
+      <Image
+        src={furniture1}
+        width={undefined}
+        height={undefined}
+        alt="furniture1"
+        class="w-full max-w-[500px]"
+        format="png"
+      />
+    </div>
+  </section>
+</MainLayout>

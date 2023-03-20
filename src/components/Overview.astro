@@ -1,0 +1,51 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { Image } from '@astrojs/image/components';
+import { sofa4 } from '../assets';
+import { sofas } from '../constants';
+---
+
+<MainLayout>
+  <section class="px-10 grid grid-cols-1 md:grid-cols-2 gap-16">
+    <div class="flex flex-col lg:flex-row items-center justify-between gap-4">
+      <ul
+        class="flex items-center justify-center gap-4 lg:gap-0 lg:flex-col lg:justify-between lg:h-full"
+      >
+        {
+          sofas.map((sofa) => (
+            <li>
+              <Image
+                src={sofa.img}
+                alt={sofa.description}
+                height={60}
+                width={60}
+                format="jpg"
+                fit="cover"
+                class="rounded-md shadow-md"
+              />
+            </li>
+          ))
+        }
+      </ul>
+      <Image
+        src={sofa4}
+        alt="sofa4"
+        width={undefined}
+        height={undefined}
+        format="png"
+        class="w-full max-w-[300px]"
+      />
+    </div>
+    <div class="flex flex-col items-center md:items-start gap-4">
+      <h2 class="font-bold text-3xl text-center">Comfortable Soga</h2>
+      <p class="text-sm max-w-[260px] text-center md:text-left">
+        When at home, you need cozy furniture and a place where your body and
+        mind can feel at peace. The furniture and couch slipcovers in your home
+        should offer you instant relaxation
+      </p>
+      <button class="bg-[#F16240] py-2 px-4 rounded-md text-white lg:text-lg"
+        >Learn More</button
+      >
+    </div>
+  </section>
+</MainLayout>
